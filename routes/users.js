@@ -89,17 +89,17 @@ router.post('/register', (req, res) => {
 
                     bcrypt.genSalt(10, (err, salt) => {
                         bcrypt.hash(newUser.password, salt, (err, hash) => {
-                        if (err) throw err;
-                        //set password to hashed
-                        newUser.password = hash;
+                            if (err) throw err;
+                            //set password to hashed
+                            newUser.password = hash;
 
-                        //save user
-                        newUser.save()
-                        .then(user => {
-                        res.flash('success_msg', 'You are now registered and can log in.');
-                        res.redirect('/login');
-                        })
-                        .catch(err => console.log(err));
+                            //save user
+                            newUser.save()
+                                .then(user => {
+                                    req.flash('success_msg', 'You are now registered and can log in.');
+                                    res.redirect('login');
+                                })
+                                .catch(err => console.log(err));
                         })
                     });
 
@@ -114,18 +114,23 @@ router.post('/register', (req, res) => {
 
 // Login handle
 
-router.post('/login', (req,res,next) =>{
+router.post('/login', (req, res, next) => {
 
-    passport.authenticate('local', { successRedirect: '/dashboard',
-    failureRedirect: '/users/login',
-    failureFlash: true })(req,res,next);
+    passport.authenticate('local', {
+        successRedirect: '/dashboard',
+
+
+        failureRedirect: '/users/login',
+        failureFlash: true
+    })(req, res, next);
+
 
 
 });
 
 //Logout handle
- 
-router.get('/logout', (req,res) =>{
+
+router.get('/logout', (req, res) => {
     req.logout();
     req.flash('success_msg', 'You are logged out.');
     res.redirect('/users/login');
