@@ -78,3 +78,5 @@ Setting up mongoDB with mongoose with a models folder and a User.js file to defi
 
 take out for now: from login and register page
         <%- include('./partials/messages.ejs'); %>
+
+Finished!
