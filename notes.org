@@ -54,6 +54,7 @@
 
 *** merge branchname   (merges branch name into currently switched-to branch
 
+
 * used express to make some routes 
 
 * Node command to start : npm run dev  (dev server)
@@ -65,7 +66,15 @@ added a views folder with some ejs files inside
 added bootstrap and font awesome cdns to the ejs layout template
 rendered a <h1> tag to the server instead of plain text and served it to port:5000
 
+emacs multi line editing:
 It's as simple as this: C-x r t
 
 had to change 
+        <%- include('./partials/messages.ejs'); %>
+to deal with newer version of EJS
+
+Setting up mongoDB with mongoose with a models folder and a User.js file to define the model schema.
+
+
+take out for now: from login and register page
         <%- include('./partials/messages.ejs'); %>
