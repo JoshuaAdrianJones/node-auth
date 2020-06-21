@@ -1,10 +1,10 @@
 const express = require('express');
-
 const expressLayouts = require('express-ejs-layouts');
+const mongoose = require('mongoose');
 
 const app = express();
 
-// EJS 
+// EJS html templates
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 

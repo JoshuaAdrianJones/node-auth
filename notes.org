@@ -26,6 +26,20 @@
 
 #+END_SRC
 
+** What does each dependancy do?
+
+   1) "bcryptjs": "^2.4.3"  = cryptography for password hashing
+   2) "connect-flash": "^0.1.1", = 
+   3) "ejs": "^3.1.3", =  embedded js html templating
+   4) "express": "^4.17.1", = web server help
+   5) "express-ejs-layouts": "^2.5.0" =  make ejs work with express
+   6) "express-session": "^1.17.1" = 
+   7) "mongoose": "^5.9.19"  = help use mongoDB with Node?
+   8) "passport": "^0.4.1" =  node user auth library
+   9) "passport-local": "^1.0.0" = locally managed user auth?
+   
+
+
 * set up a .gitignore file
 
 ** git commands
@@ -43,3 +57,15 @@
 * used express to make some routes 
 
 * Node command to start : npm run dev  (dev server)
+
+
+* Dev Log <2020-06-21 Sun>
+
+added a views folder with some ejs files inside
+added bootstrap and font awesome cdns to the ejs layout template
+rendered a <h1> tag to the server instead of plain text and served it to port:5000
+
+It's as simple as this: C-x r t
+
+had to change 
+        <%- include('./partials/messages.ejs'); %>
