@@ -30,7 +30,7 @@ npm start
 - checks login page for empty fields
 - checks password and password re-type are the same
 
-# Login
+## Login
 
 - Handles login with passport.js
 - Login checks hashed password and email address for user
