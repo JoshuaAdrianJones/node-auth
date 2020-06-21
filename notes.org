@@ -1,6 +1,14 @@
-* Notes on noed.js with passport authentication
+# TITLE : notes on learning node / express passport JS
 
-* dependancies :
+#+TODO: TODO DOING | DONE
+
+* Notes on node.js with passport authentication
+
+* MONGODB
+
+** MONDODB ATLAS user : josh pw: jaffacake7
+
+* Dependancies :
 
 #+BEGIN_SRC javascript
 
@@ -19,3 +27,19 @@
 #+END_SRC
 
 * set up a .gitignore file
+
+** git commands
+
+*** branch "branchname"
+
+*** checkout "branchname"
+
+*** add -A  (adds all)
+
+*** commit -m "commit msg"
+
+*** merge branchname   (merges branch name into currently switched-to branch
+
+* used express to make some routes 
+
+* Node command to start : npm run dev  (dev server)
