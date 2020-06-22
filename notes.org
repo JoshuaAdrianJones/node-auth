@@ -80,3 +80,10 @@ take out for now: from login and register page
         <%- include('./partials/messages.ejs'); %>
 
 Finished!
+
+
+* Dev Log <2020-06-22 Mon>
+
+made a new branch to work on adding a delete button in to the dashboard page
+
+exposed some more data like id and date(that account was created)

@@ -118,22 +118,41 @@ router.post('/login', (req, res, next) => {
 
     passport.authenticate('local', {
         successRedirect: '/dashboard',
-
-
-        failureRedirect: '/users/login',
+        failureRedirect: '/',
         failureFlash: true
     })(req, res, next);
-
-
-
 });
 
 //Logout handle
 
 router.get('/logout', (req, res) => {
     req.logout();
-    req.flash('success_msg', 'You are logged out.');
-    res.redirect('/users/login');
+    req.flash('success_msg', 'You have logged out successfully.');
+    res.redirect('/');
+});
+
+router.post('/delete', (req, res) => {
+
+    let checkedValue = req.body['delete_check_box'];
+
+    if (!checkedValue) {
+
+        req.flash('error_msg', 'Please tick the checkbox to confirm you really want to delete your account.');
+        res.redirect('/dashboard');
+
+    } else {
+        User.deleteOne({
+            _id: req.user._id
+        }, function (err) {});
+
+
+        req.logout();
+        req.flash(
+            "success_msg",
+            "You have successfully deleted your account, you will have to re-register to access again."
+        );
+        res.redirect("/");
+    }
 });
 
 module.exports = router;

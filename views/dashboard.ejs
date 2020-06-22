@@ -1,4 +1,27 @@
 <h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome <%= name %></p>
-<p> Your email addess is: <%= email %></p>
-<a href="/users/logout" class="btn btn-secondary">Logout</a>
+<p class="lead mb-3">Welcome, you are signed in as: <%= name %></p>
+<p class="lead mb-3">Your account was created on: <%= date %></p>
+<p class="lead mb-3">Your user ID is <%= id %></p>
+
+
+<p class="lead mb-3"> Your email addess is: <%= email %></p>
+
+
+<%- include('./partials/messages.ejs'); %>
+
+<form action="/users/delete" method="POST">
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="delete_check_box" name="delete_check_box" /> By ticking this you confirm you
+                really want to delete your account.
+            </label>
+        </div>
+    </div>
+
+    <button type="submit" class="mb-3 btn btn-secondary btn-danger">Delete account</button>
+</form>
+
+<p>
+    <a href="/users/logout" class="btn btn-secondary">Logout</a>
+</p>
