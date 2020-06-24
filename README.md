@@ -1,10 +1,12 @@
-# node-auth
+# node-auth-CRUD
 
 ### Authentication with express, passport, EJS, and mongoose
 
+### Extended to full CRUD
+
 ## usage
 
-install
+### Install
 
 ```
 $ npm install
@@ -45,9 +47,4 @@ npm start
 - Displays the data of the logged in user
 - allows you to logout
 - allows you to delete your account
-
-### up next
-
-- Dashboard should allow you to update your account by changing your password
-- Add a change password button - redirect to a change password page:
-  - this should take your old password and require you to enter your new password twice.
+- allows you to change your password

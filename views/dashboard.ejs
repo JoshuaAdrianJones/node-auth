@@ -1,10 +1,12 @@
-<h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome, you are signed in as: <%= name %></p>
-<p class="lead mb-3">Your account was created on: <%= date %></p>
-<p class="lead mb-3">Your user ID is <%= id %></p>
+<div class="mt-5 pl-3 pr-3 pb-2 card">
+<h1 class="mt-4">Account management dashboard</h1>
+<p class="lead mb-3">Welcome, you are signed in as: 
+    <span class="text-capitalize"><%= name %></span>.</p>
+<p class="lead mb-3">Your account was created on: <%= date %>.</p>
+<p class="lead mb-3">Your user ID is <span class="text-uppercase"> <%= id %> </span></p>
 
 
-<p class="lead mb-3"> Your email addess is: <%= email %></p>
+<p class="lead mb-3"> Your email addess is: <%= email %>.</p>
 
 
 <%- include('./partials/messages.ejs'); %>
@@ -23,5 +25,14 @@
 </form>
 
 <p>
+    <a href="/users/change-password" class="btn btn-warning btn-secondary">Change password</a>
+</p>
+
+<p>
     <a href="/users/logout" class="btn btn-secondary">Logout</a>
 </p>
+
+
+<footer class="mt-2 text-right" >by Joshua Jones</footer>
+
+</div>
