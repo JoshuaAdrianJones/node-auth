@@ -48,3 +48,7 @@ npm start
 - allows you to logout
 - allows you to delete your account
 - allows you to change your password
+
+
+
+![Alt Text](/fullcrud.gif)
